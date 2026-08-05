@@ -2,7 +2,7 @@
 
 Real-time documentation retrieval for coding agents.
 
-Mintlify Index answers implementation questions — syntax, configuration, migration, setup — with compact, cited context assembled from primary-source developer documentation and live web search. It ships as a hosted [MCP](https://modelcontextprotocol.io) server exposing a single `context` tool.
+Mintlify Index answers implementation questions (syntax, configuration, migration, setup) with compact, cited context assembled from primary-source developer documentation and live web search. It ships as a hosted [MCP](https://modelcontextprotocol.io) server exposing a single `context` tool.
 
 ## Quickstart
 
@@ -64,7 +64,7 @@ combine + rerank ── deterministic scoring, hosted reranker, LLM fallback
 context assembly ── token-budget packing with query-centered snippets
           │
           ▼
-MCP `context` tool / HTTP API
+MCP `context` tool
 ```
 
 | Directory | Pipeline stage |
@@ -77,25 +77,12 @@ MCP `context` tool / HTTP API
 | `src/retrieval/operations.ts` | `context` / `search` / `contents` operations |
 | `src/retrieval/retrievalConfig.ts` | Tunable retrieval configuration |
 | `src/mcp/` | MCP server: the `context` tool over streamable HTTP |
-| `src/api/` | HTTP API: `/v1/context`, `/v1/search`, `/v1/contents` |
 | `src/cli/` | The `mint index` installer (ships in the [`mint`](https://www.npmjs.com/package/mint) CLI) |
 | `src/internal/` | Interfaces for Mintlify-platform components backing the hosted service |
 
 ## About this repo
 
 This is a source release of the hosted service. It is **not runnable standalone**: docs ingestion, the Chroma corpus, auth, and infrastructure live in the Mintlify platform and are represented here by small interfaces in `src/internal/`. `src/server.ts` shows how the pieces wire together in production.
-
-Internally, Mintlify Index is codenamed **Universal Search** — you'll see that name throughout the code.
-
-## HTTP API
-
-The same engine is exposed as an authenticated HTTP API:
-
-- `POST /v1/context` — one-call cited answer for a query
-- `POST /v1/search` — ranked results with snippets
-- `POST /v1/contents` — full page contents for result URLs
-
-Request and response shapes live in `src/api/validator.ts`.
 
 ## License
 

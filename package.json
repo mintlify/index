@@ -1,7 +1,7 @@
 {
   "name": "@mintlify/index",
   "version": "1.0.0",
-  "description": "Source release of Mintlify Index \u2014 the retrieval engine and MCP server behind https://index.mintlify.com/mcp",
+  "description": "Source release of Mintlify Index, the retrieval engine and MCP server behind https://index.mintlify.com/mcp",
   "license": "MIT",
   "private": true,
   "type": "module",
