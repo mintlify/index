@@ -1,4 +1,4 @@
-![Mintlify Index](https://github.com/mintlify/index/blob/main/public/cover.png?raw=true)
+![Mintlify Index](./public/cover.png)
 
 # Mintlify Index
 
