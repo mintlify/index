@@ -1,5 +1,8 @@
 # Mintlify Index
 
+> [!WARNING]
+> Mintlify Index has been discontinued and this repo is no longer maintained. The hosted MCP server and the `mint index` command have been shut down.
+
 Real-time documentation retrieval for coding agents.
 
 Mintlify Index answers implementation questions (syntax, configuration, migration, setup) with compact, cited context assembled from primary-source developer documentation and live web search. It ships as a hosted [MCP](https://modelcontextprotocol.io) server exposing a single `context` tool.
